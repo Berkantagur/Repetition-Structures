@@ -51,6 +51,7 @@ int main(void) {
 		}
 		printf("\n");
 	}
+	
 
 	for (k = 0; k <= 4; k += 1) {
 		for (l = 4; l >= k; l -= 1) {
