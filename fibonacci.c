@@ -5,13 +5,17 @@ int main(){
 
 //FIBONACCI first 10 values
 	int a, b, c, i;
+	int number;
 	a = 1;
 	b = 1;
-
+    
+	printf("Please enter a number:");
+	scanf("%d",&number);
+	
 	printf("%d\n", a);
 	printf("%d\n", b);
 
-	for (i = 1; i <= 10; i++)
+	for (i = 1; i <= number; i++)
 	{
 		c = a + b;
 		a = b;
