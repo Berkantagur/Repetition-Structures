@@ -1,0 +1,38 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <stdbool.h>
+
+bool is_palindrome(int number) {
+    int reversed_number = 0;
+    int original_number = number;
+    while (original_number > 0) {
+        reversed_number = reversed_number * 10 + original_number % 10;
+        original_number /= 10;
+    }
+    return number == reversed_number;
+}
+
+void check_palindrome(int numbers[], int n) {
+    for (int i = 0; i < n; i++) {
+        if (is_palindrome(numbers[i])) {
+            printf("%d bir palindrom sayidir.\n", numbers[i]);
+        } else {
+            printf("%d bir palindrom sayi değildir.\n", numbers[i]);
+        }
+    }
+}
+
+int main() {
+    int n = 5;
+
+    int numbers[100];
+    printf("Rastgele üretilen 5 sayi:\n");
+    for (int i = 0; i < n; i++) {
+        numbers[i] = rand() % 10000 + 1000;
+        printf("%d ", numbers[i]);
+    }
+    printf("\n");
+    printf("Her bir sayinin palindrom olup olmadiği:\n");
+    check_palindrome(numbers, n);
+    return 0;
+}
