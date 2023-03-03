@@ -15,9 +15,9 @@ bool is_palindrome(int number) {
 void check_palindrome(int numbers[], int n) {
     for (int i = 0; i < n; i++) {
         if (is_palindrome(numbers[i])) {
-            printf("%d bir palindrom sayidir.\n", numbers[i]);
+            printf("%d is a palindrome number.\n", numbers[i]);
         } else {
-            printf("%d bir palindrom sayi değildir.\n", numbers[i]);
+            printf("%d is not a palindrome number.\n", numbers[i]);
         }
     }
 }
